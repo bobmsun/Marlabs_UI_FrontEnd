@@ -4,7 +4,7 @@ var myApp = angular
                       var country = {
                           name:'USA',
                           capital:"Washington DC",
-                          flag:"/Day 5/本节课第二个html+js/images/flag.jpg"
+                          flag:"/AngularJS/Day5/本节课第二个html+js/images/flag.jpg"
                       }
 
                       var employees = [
