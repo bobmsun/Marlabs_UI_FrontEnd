@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
+    <script src="mg-image.js"></script>
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        table,td, th{
+            border: 1px solid red;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    
+    <div ng-controller="myController">
+
+        <!-- 第一个例子：one-way data binding 与 two-way data binding -->
+
+        <div>
+            Name: {{country.name}}
+        </div>
+        <div>
+            Capital: {{country.capital}}
+        </div>
+        <div>
+            <img ng-src="{{country.flag}}" style="height:200px;width:400px">
+        </div>
+
+
+        <div>
+            <!-- two way -->
+            <!-- ng-model is the most commonly used way of 2-way data binding -->
+            <!-- 我们并没有发送request，并没有reload the whole page，并没有 server involved，那么为什么我们在input例更新的内容，能够实时的更新在下面？-->
+            <!-- 这就是 ng-model 背后为我们做的事情，他背后还有一个 event，帮我们实现了这样的效果 -->
+            <input type="text" ng-model="name" ><br>
+
+            <!-- one way -->
+            <!-- Get data from the module and display it in the view. That's is one way data binding -->
+            {{name}}
+        </div>
+        
+
+        <hr>
+
+        <!-- 第二个例子：表-->
+        <table>
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Gender</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in employees">                   <!-- 这里用的是 ng-repeat -->
+                    <td>{{employee.firstName}}</td>
+                    <td>{{employee.lastName}}</td>
+                    <td>{{employee.gender}}</td>
+                    <td>{{employee.salary}}</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <hr>
+        <hr>
+
+        <!-- 第三个例子：two-way data binding + 表 -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Likes</th>
+                    <th>DisLikes</th>
+                    <th>Like/Dislike</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="tech in technologies">
+                    <td>{{tech.name}}</td>
+                    <td>{{tech.likes}}</td>
+                    <td>{{tech.dislikes}}</td>
+                    <td>
+                        <input type="button" value="Like" ng-click="incrementLikes(tech)" />          
+                        <!-- 这里用的不是 普通的 onclick 事件，因为我们想用angular，所以应该用 angular 的 ng-click -->
+                        <input type="button" value="Dislike" ng-click="incrementDisLikes(tech)" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        
+        <hr>
+        <hr>
+
+        <!-- 第四个例子：hide 和 show -->
+        <input type="checkbox" ng-model="hideSalary"> Hide Salary    <!-- hideSalary 这个 variable 是在这类create的，并不是在 js 中 create的；这是 variable created on the run -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>City</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="emp in emps">
+                    <td>{{emp.name}}</td>
+                    <td>{{emp.gender}}</td>
+                    <td>{{emp.city}}</td>
+                    <td ng-hide="hideSalary">{{emp.salary}}</td>       <!-- ng-hide 和 ng-show 正相反 -->
+                    <td ng-show="hideSalary">####</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</body>
+</html>
