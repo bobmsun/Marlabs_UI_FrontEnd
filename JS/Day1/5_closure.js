@@ -1,4 +1,4 @@
-// Capturing
+// Capturing: access higher function variable in the inner function
 // 例 1:
 function outer(a=1,b=2){
     var name="John Wick";
@@ -42,6 +42,7 @@ outer2()
 
 // 下节课开始讲 prototype，先开个头
 // prototype 就像 inheritance
+// inheritance happens through prototype
 // Object is the parent class of every object we create
 
 
