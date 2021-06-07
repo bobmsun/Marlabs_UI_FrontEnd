@@ -20,13 +20,12 @@ let task = new Promise((resolve, reject) => {
       }
     )
   
-    
     // Specify the code to be executed 
     // after the Promise is settled
     .finally(
 
-        // console.log("Finally")
-        () => {
+        // console.log("Finally")             // will not wait for promise to be settled; writing like this is actually not proper
+        () => {                               // should write a function inside finally block, this fuction will be executed right after promise is settled.
         console.log(
         "This is finally() block that is " +
         "executed after Promise is settled"
@@ -34,6 +33,9 @@ let task = new Promise((resolve, reject) => {
      }
     );
 
-    ///async await
-    //Promises.all
-    //Promise chaining
+
+    // 只要当 promise settles down (settle down means promise 明确了是 reject or success)， finally 就会立刻 run
+
+    // async await
+    // Promises.all
+    // Promise chaining
