@@ -1,3 +1,6 @@
+// class, extends, super 是 es6 才有的
+// They are actually implemented as prototype
+
 class Animal{
     constructor(name, height){
         this.name = name;
