@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
+    <script src="filtering.js"></script>
+    <style>
+        body{
+            font-family: 'verdana'
+        }
+        table{
+            border-collapse: collapse;
+        }
+        td{
+            border: 1px solid black;
+            padding: 5px;
+        }
+        th{
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body ng-controller="myController">
+    Rows to display:<input type="number" step="1" ng-model="rowCount" max="5" min="0" />
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Date Of Birth</th>
+            <th>Gender</th>
+            <th>Salary(number filter)</th>
+            <th>Name(currency filter)</th>
+        </thead>
+        <tbody>
+            <!-- 这里的 ng-repeat 就是一个 directive -->
+            <tr ng-repeat="emp in employees | limitTo:rowCount">      <!-- Want to control the number of rows to display -->
+                <td>{{emp.name | uppercase}}</td>                     <!-- add style using pipe | -->
+                <td>{{emp.dateOfBirth | date:'dd-MM-yyyy'}}</td>
+                <td>{{emp.gender}}</td>
+                <td>{{emp.salary|number:2}}</td>
+                <td>{{emp.salary | currency:"$"}}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
