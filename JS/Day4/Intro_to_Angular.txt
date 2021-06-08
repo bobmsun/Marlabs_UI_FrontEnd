@@ -1,0 +1,23 @@
+JQuery was originally created for DOM munipulation. JQuery is very good in DOM munipulation.
+
+AngularJS - because to achieve something, we need to write hundreds lines of JS code. So angular was created to reduce JS code,
+so that we can have less code to achieve the same thing
+
+JQuery is a library.
+AngularJS is a framework.
+Both of them are written in JavaScript.
+
+Angular 下载 uncompressed version
+compressed version - for production
+uncompressed version - for development
+uncompressed version 相比 compressed version 只是 uncompressed version 有 more useful error message
+
+AngularJS is very similar to MVC (Model-view controller)
+
+How View and Controller communicate?
+using $scope
+
+Controller creates the view. Controller creates the date and the logic of the view.
+
+
+

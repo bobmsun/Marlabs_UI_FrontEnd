@@ -12,12 +12,12 @@
         const promise = new Promise((resolve, reject) => {
             const request = new XMLHttpRequest();
            
-            request.open('GET', 'http://dummy.restapiexample.com/api/v1/employees');
+            request.open('GET', 'http://dummy.restapiexample.com/api/v1/employees');     // try change the url to introduce some error
             request.onload = () => {
                 if (request.status === 200) {
-                    resolve(request.response); // we got data here, so resolve the Promise
+                    resolve(request.response);               // we got data here, so resolve the Promise
                 } else {
-                    reject(Error(request.statusText)); // status is not 200 OK, so reject
+                    reject(Error(request.statusText));       // status is not 200 OK, so reject
                 }
             };
 
