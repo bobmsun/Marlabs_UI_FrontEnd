@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
-    <script src="filtering.js"></script>
+    <script src="1_filtering.js"></script>
     <style>
         body{
             font-family: 'verdana'
@@ -41,7 +41,7 @@
                 <td>{{emp.name | uppercase}}</td>                     <!-- add style using pipe | -->
                 <td>{{emp.dateOfBirth | date:'dd-MM-yyyy'}}</td>
                 <td>{{emp.gender}}</td>
-                <td>{{emp.salary|number:2}}</td>
+                <td>{{emp.salary| number:2}}</td>
                 <td>{{emp.salary | currency:"$"}}</td>
             </tr>
         </tbody>

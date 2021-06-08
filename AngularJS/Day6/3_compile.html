@@ -6,10 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
-    <script src="compile.js"></script>
+    <script src="3_compile.js"></script>
 </head>
 <body>
+    <!-- 本节课第三个topic： compile and link -->
+    <!-- Compile is the first of execution/processing a directive for rendering
+         Loads and traverses the DOM 
+         happens for both existing Aangular directives or Custom directives -->
+    <!-- Next step after compile is Link -->
     <div ng-controller="msg">
+        <div message text="first"></div>
+
         <div message text="{{i}}" ng-repeat="i in [1,2,3,4,5]">
             {{i}}
         </div>

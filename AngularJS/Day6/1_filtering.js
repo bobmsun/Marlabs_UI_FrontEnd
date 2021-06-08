@@ -1,5 +1,5 @@
 var myApp = angular
-                  .module("myModule", [])
+                  .module("myModule", [])    // 这里的空list 意思是 no dependancy
                   .controller("myController", function($scope){
                     var employees = [
                         {

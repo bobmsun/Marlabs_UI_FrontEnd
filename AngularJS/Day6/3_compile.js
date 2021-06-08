@@ -5,7 +5,7 @@ app.controller('msg', function($scope){
 
 app.directive('message', function($interpolate){
     return{
-        compile: function(tElement, tAttributes){
+        compile: function(tElement, tAttributes){                  // want to execute some code during the compile phase
             tElement.css("border","1px solid black");
             console.log(tAttributes.text + '--In Compile')
 

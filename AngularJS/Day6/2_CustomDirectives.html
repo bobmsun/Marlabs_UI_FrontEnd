@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
-    <script src="customDirective.js"></script>
+    <script src="2_customDirective.js"></script>
 </head>
 <body>
 
@@ -24,13 +24,19 @@
         摘自：https://www.w3schools.com/angular/angular_directives.asp
     -->
 
-    <!-- <script type="text/ng-template" id="my-info-msg.html">
+    <script type="text/ng-template" id="my-info-msg_hello">
         <b>{{msg}}</b>
-    </script> -->
+    </script>
 
    <div ng-controller="emp">
+       <div dir1></div>
        <div my-info-msg></div>                   <!-- 这个例子是 use directive as attribute -->
        <my-info-msg></my-info-msg>               <!-- 这个例子是 use directive as an element -->
+       
+       
+       
+       <div my-info-msg-link></div>
+       <my-info-msg-link></my-info-msg-link>
    </div>
 </body>
 </html>
