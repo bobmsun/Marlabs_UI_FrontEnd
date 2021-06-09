@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
+    <script src="1_watcher.js"></script>
+</head>
+<body>
+    <!-- 今天讲的是 Watcher -->
+    <!--
+        How do we do 2-way data binding?  Use ng-model
+        How do we do 1-way data binding?  use {{}}
+
+        Watcher are created by binding when we have binding
+
+        We can create watch for a single variable, collection, and object.
+        Watcher depands on binding.
+    -->
+    <div ng-controller="msg">
+
+        a = <input ng-model="a" />
+        <div>a={{a}}</div>
+        <hr>
+        b = <input ng-model="b" />
+        <div>b={{b}}</div>
+        <hr>
+        c = <input ng-model="a" />
+        <div>c={{c}}</div>
+        <hr>
+
+
+      <div ng-repeat="o in emps">
+          <div>{{o.empno}} - {{o.ename}}</div>
+      </div>
+      
+      <button ng-click="addEmp()">add</button>
+      
+      <button ng-click="modify3rdEmp()">modify 3rd Emp</button>
+      
+    </div>
+</body>
+</html>
