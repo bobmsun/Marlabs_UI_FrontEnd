@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" integrity="undefined" crossorigin="anonymous">
+    <script src="angular.js"></script>
+    <script src="angular-route.js"></script>
+    <script src="2_routing.js"></script>
+    <title>Document</title>
+</head>
+<body ng-app="app">
+    <!-- 下面是本节课的第二个topic：routing -->
+   <div class="container">
+       <div class="row">
+           <div class="col-sm-12 well">
+             Header Of Routing App
+             <hr>
+           </div>
+       </div>
+       <div class="row">                                     <!-- row 是一个 built-in bootstrap class -->
+           <div class="col-sm-5 well" style="height:100%;">
+
+            <a href="#!/">HOME</a>
+            <a href="#!/first-msg">FIRST</a>
+            <a href="#!/second-msg">SECOND</a>
+            <a href="#!/third-msg">THIRD</a>
+           </div>
+           <div class="col-sm-7 well" style="height:100%;">
+            <div ng-view></div>                         <!-- 用 routing 时，需要用 ng-view -->
+         </div>
+
+         <!-- 
+            ng-view is a directive that complements the $route service by including the rendered template of the current route into the main layout file.
+            Every time the current route changes, the included view changes with it according to the configuration of the $route service.
+         -->
+
+       </div>
+   </div>
+</body>
+</html>

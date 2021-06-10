@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="1_digest.js"></script>
+</head>
+<body>
+    <div id="div" ng-controller="emp">
+
+        a = <input ng-model="a" />
+        <div>a={{a}}</div>
+        <hr>
+        b = <input ng-model="b" />
+        <div>b={{b}}</div>
+        <hr>
+
+        <button ng-click="calcSum()">Calc Sum</button>         <!-- use ng-click so that we use the angular contecxt--> 
+        <button onclick="btnClick()">Calc Sum</button>
+        <div>Sum = {{s}}</div>
+
+    </div>
+</body>
+</html>
+
+
+
+<!--
+    $0 - is the current selected tag
+    augular.element($0).scope()
+    augular.element($0).scope().b = 1000
+    如果不apply，会发现 b 的值在界面上没有变化（虽然在浏览器中可以查看到变化）
+    augular.element($0).scope().$apply()
+
+
+    之所以要 apply
+    就是因为我们change the value时，not in the angular context, 所以需要call apply 来 trigger digest
+-->
