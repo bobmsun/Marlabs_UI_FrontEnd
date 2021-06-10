@@ -1,0 +1,19 @@
+Express is a middleware. 它有点像 web server. It helps us to create web application.
+
+npm - node package manager, 有点像 maven
+
+如果把 node_modules 这个folder删掉（把所有的libraray 删掉），只要cd 到 package.json 所在的文件夹，run 一下 npm install, 就可以把 package 安装回来；
+如果从 git 上pull 下来老师的project，然后想run；需要先 run 一下 npm install 把所有需要的package 下载下来，因为老师的 gitignore 把 node_modules 给 ignore 了
+
+
+如果自己的电脑 set up 不了 mongoDB，可以用 mongoDB atlas. MongoDB atlas 是 online Mongo MongoDB, online database.
+
+
+端口：
+MongoDb 20017
+MySQL  3306
+Tomcat 8080
+
+
+what are the ways to create JS objects?
+4 ways

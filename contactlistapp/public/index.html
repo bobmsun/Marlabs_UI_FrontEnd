@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 以下是 Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+    <!-- Optional theme -->  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Below is how to 测试一下Angular 是否成功引入进来了，用two-way data binding，可以直接在标签上create variable -->
+    <!-- <input type="text" ng-model="a">       
+    {{a}} -->
+
+    <!-- If you want to write Bootstrap code, need to include it in a container 这就是为什么我们下面需要有一个 div-->
+    <div class="container" ng-controller="AppCtrl">
+        <h1>CONTACT LIST APP</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="contact in contactlist">
+                    <td>{{contact.name}}</td>
+                    <td>{{contact.email}}</td>
+                    <td>{{contact.number}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>    <!-- 我们这里用的是Angular 1.2, 之前都是1.5 -->
+    <script src="controller/controller.js"></script>
+</body>
+</html>
