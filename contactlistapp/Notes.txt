@@ -17,3 +17,17 @@ Tomcat 8080
 
 what are the ways to create JS objects?
 4 ways
+
+
+MongoDB 中，先 create database，再 create Collection (有点像 SQL Database 中的 table), 再 insert document (就是 SQL 中table 的 row)
+
+
+
+In higher version of Angular 11, eg Angular 11, 用 mongoose (类似与hibernate)
+For AngularJS, we have to use mongojs
+
+We're using Express server. Express is a server for node js. If you want to use a package in JS file, you need to require it.
+Require is a JS built-in function. Require function loads the package.
+
+Express is a web server for Node js.
+

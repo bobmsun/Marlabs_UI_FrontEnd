@@ -16,7 +16,7 @@
 </head>
 <body>
     
-    <!-- Below is how to 测试一下Angular 是否成功引入进来了，用two-way data binding，可以直接在标签上create variable -->
+    <!-- Below is how to 测试一下Angular 是否成功引入进来了，用two-way data binding测试，因为可以直接在标签上create variable -->
     <!-- <input type="text" ng-model="a">       
     {{a}} -->
 
@@ -29,13 +29,23 @@
                     <th>Name</th>
                     <th>Email</th>
                     <th>Phone</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
+                <tr>
+                    <td><input type="text" ng-model= "contact.name" class="form-control"></td>
+                    <td><input type="text" ng-model= "contact.email" class="form-control"></td>
+                    <td><input type="text" ng-model= "contact.number" class="form-control"></td>
+                    <td><button class="btn btn-primary" ng-click="addContact()">Add Contact</button></td>       <!-- btm-primary: blue -->
+                    <td><button class="btn btn-info" ng-click="update()">Update</button></td>
+                </tr>
                 <tr ng-repeat="contact in contactlist">
                     <td>{{contact.name}}</td>
                     <td>{{contact.email}}</td>
                     <td>{{contact.number}}</td>
+                    <td><buttom class="btn btn-danger" ng-click="remove(contact._id)">Remove</buttom></td>
+                    <td><buttom class="btn btn-warning" ng-click="edit(contact._id)">Edit</buttom></td>
                 </tr>
             </tbody>
         </table>
