@@ -67,6 +67,8 @@ function AppCtrl($scope, $http){
     $scope.update = function(){
         console.log($scope.contact._id);
         // 这里的 $scope.contact 是 update 后的 new data
-        $http.put('/contactlist/' + $scope.contact._id, $scope.contact)
+        $http.put('/contactlist/' + $scope.contact._id, $scope.contact).success(function(response){
+            refresh();
+        })
     }
 }
