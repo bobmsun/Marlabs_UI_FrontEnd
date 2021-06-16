@@ -1,0 +1,4 @@
+Angular is component based.
+Entire page is a collection of component.
+
+Typescript is Javascript with data types.
