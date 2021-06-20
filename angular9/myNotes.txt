@@ -15,15 +15,16 @@ module: module inplements a feature in a project
 
 
 
-ng new project angular9
+ng new angular9
 ng generate component first
 (ng g c first)
 ng serve
+ng serve -o   （会自动在浏览器中 open）
 
 npm i bootstrap
 npm i jquery popper.js          (these are the two depandencies for bootstrap)
 
-
+ng g c third --inlineTemplate --inlineStyle
 
 
 Attributes                   vs                      Property

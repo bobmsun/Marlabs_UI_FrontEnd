@@ -2,4 +2,28 @@
 
 <h2 [class]='successClass'>Angular Programming</h2>
 
-<h2 class='text-success' [class]='specialClass'>Angular Programming</h2>
+<h2 class='text-success' [class]='specialClass'>Angular Programming</h2>    <!-- [class] binds to a variable -->
+
+<h2 [class.text-danger]="hasError">Hello World</h2>     <!-- if hasError is true, then class=text-danger; -->
+
+<h2 [ngClass]="messageClasses">Hello World</h2>
+
+<h2 [style.color]="'orange'">Style Binding</h2>        <!-- need to provide style as a string -->
+
+<h2 [style.color]="hasError ? 'red' : 'orange'">Style Binding</h2>
+
+<h2 [style.color]="highLight">Style Binding</h2>
+
+<h2 [ngStyle]="titleStyle">Hello World</h2>
+
+<hr>
+
+<button (click)="onClick()">CLICK</button>
+
+<hr>
+
+<input type="text" #myInput name="username" id="username">
+<button (click)="getText(myInput.value)">GetText</button>
+
+<hr>
+

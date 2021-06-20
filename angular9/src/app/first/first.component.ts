@@ -4,14 +4,17 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-first',
   // templateUrl: './first.component.html',
   // styleUrls: ['./first.component.css']
+
+  // .toUpperCase() is a JS function
   template: `{{name}}<br>
-             {{name.toUpperCase()}}<br>           // .toUpperCase() is a JS function
+             {{name.toUpperCase()}}<br>
              {{hello()}}<br>
              {{siteUrl}}<br>
              <br>
-             <input [id]="txt" type="text" value='Angular9'/>                       // 这里的 id 是 property binding
-             <input [disabled]="false" id="{{txt}}" type="text" value='Angular9'/>           // 这里的 id 是 interpolation
-             `,
+             <input [id]="txt" type="text" value='Angular9'/>
+             <input [disabled]="false" id="{{txt}}" type="text" value='Angular9'/>`,
+  // 倒数第二行的 id 是 property binding
+  // 倒数第一行的 id 是 interpolation
   styles: []
 })
 
