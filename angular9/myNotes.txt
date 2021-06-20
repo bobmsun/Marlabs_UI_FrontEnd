@@ -1,0 +1,34 @@
+Angular is component-based, meaning the entire page is a collection of component.
+
+Component is a part of the view.
+1. template (html)
+2. metadata (@)
+3. class
+
+3 files + test file
+
+type script - js with types
+
+wheneer we create a component, Angular CLI will create 4 files
+
+module: module inplements a feature in a project
+
+
+
+ng new project angular9
+ng generate component first
+(ng g c first)
+ng serve
+
+npm i bootstrap
+npm i jquery popper.js          (these are the two depandencies for bootstrap)
+
+
+
+
+Attributes                   vs                      Property
+HTML                                                  DOM
+Attributes initialize the DOM props                change the DOM props
+
+$0.value
+$0.getAttribute('value')
