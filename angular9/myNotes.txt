@@ -26,6 +26,9 @@ npm i jquery popper.js          (these are the two depandencies for bootstrap)
 
 ng g c third --inlineTemplate --inlineStyle
 
+ng g service employee
+
+
 
 Attributes                   vs                      Property
 HTML                                                  DOM

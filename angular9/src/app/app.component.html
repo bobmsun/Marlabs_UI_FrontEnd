@@ -1,9 +1,41 @@
 <!-- <h2>The App Component</h2>
 <app-first></app-first>       How to make the first component a child component of the root component? Just insert first componenet here -->
 
-<div class="container">         <!-- 这里用的是 Bootstrap 的 container-->
+<div class="container text-center">         <!-- 这里用的是 Bootstrap 的 container-->
   <h2>The App Component</h2>
   <app-first></app-first>
   <app-class-binding></app-class-binding>
   <app-third></app-third>
+  <app-child (childEvent)="message=$event" [parentData]="name"></app-child>
+  From the Child: {{message}}
+
+  <hr>
+
+  <!-- <app-contentprojection>
+    <h1>Hello World!!!</h1>
+    <button class="btn btn-danger">Say Hello</button>
+    <h3>{{name}}</h3>
+  </app-contentprojection> -->
+
+  <app-contentprojection>
+    <h1>Json</h1>
+    <button class="btn btn-danger">First</button>
+  </app-contentprojection>
+
+  <app-contentprojection>
+    <h1>Jill</h1>
+    <button class="btn btn-warning">First</button>
+  </app-contentprojection>
+
+  <app-employee-list></app-employee-list>
+  <app-employee-detail></app-employee-detail>
+
+
+
+
+
+
+
+
+
 </div>
