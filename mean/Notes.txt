@@ -1,0 +1,7 @@
+ng serve -o
+ng build
+npm i express
+
+connect my application to database - mongoose
+
+npm i mongoose
