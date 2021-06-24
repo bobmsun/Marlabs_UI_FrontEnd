@@ -1,0 +1,56 @@
+npx create-react-app reactapp           -- want to run something without install it
+
+
+
+Why React?
+
+Angular - is a framework - framework is quite heavy
+React - is a liabrary
+
+React is created for rendering DOM faster
+操作 DOM 是一个非常 expensive 的操作, update of DOM is very expensive, will make web app slower
+
+(DOM - Document Object Model)
+
+
+How React is faster than regular DOM updatation?
+React uses virtual DOM. 
+React creates a copy of the DOM, which is known as the virtual DOM.
+React will compare to see which part of the view is change. Only the changed part will be update to avoid reloading the entire page.
+
+So React scales better than Angular, faster than Angular
+
+React is only used for UI
+因为 React is just a library, 所以 想用 Routing/ make http calls,
+需要 needs to install separate packages out of the box
+
+React component can be created either by a class or a function
+
+3年前，class 有 state，function 没有
+现在
+Whatever class can do, now function can do with the help of hooks
+hooks are separate functions I can use to get the feature of class component
+
+
+npx 和 npm command 是 我们在 安装 node environment 时跟着安装的
+
+
+For class component, you need to have a render function
+
+之前学过 bind, call, apply 这3种 redirect the this pointer 的方法
+
+必须要 export，才能在其他 file 中 import
+
+hooks are basically functions
+hooks allow you to have state management inside functional component
+
+
+setState is Asynchronous
+Alos have an option to write a callback function
+
+React 的 pulg-in:
+rce - create a class component
+rounst - create constructor
+
+接下来学：
+Redux, Flux
