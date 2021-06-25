@@ -35,7 +35,8 @@ export class EventBind extends Component {
                 <h2>{this.state.message}</h2>
                 <button onClick={this.clickHandler1}>CLICK (Event Bind)</button>    {/* 这个不 work */}
                 <hr />
-                <button onClick={this.clickHandler2.bind(this)}>CLICK (Event Bind)</button>      {/* every time it rerenders, it creates a new bind */}
+                <button onClick={this.clickHandler2.bind(this)}>CLICK (Event Bind)</button>      
+                {/* 这种方式不好的原因：every time it rerenders, it creates a new bind */}
                 <hr />
                 <button onClick={() => this.clickHandler2()}>CLICK (Event Bind)</button>       {/* arrow function is used in a hurry */}
                 <hr />

@@ -27,6 +27,8 @@ export class Counter extends Component {
     }
 
     // this will still increase by i, because of batch model of execution; 这是 React 的 optimized execution method
+    // 这个不 work（不 +5）的原因是：React executes these same statements in batch: execute them in parallel; 这是 React 的一种优化
+    // if 我们想解决 这里React 的 execution in batch 的优化带来的问题，we need to use previous state
     // incrementFive() {
     //     this.increment()
     //     this.increment()
