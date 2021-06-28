@@ -1,0 +1,25 @@
+npx create-react-app mernapp
+
+
+ContextAPI - a feature built in React
+
+Similar to ContextAPI, but they are separate libraries
+Redux
+Flux
+
+Context object - so that we can share some information across components
+Context object - we get it from context API. it allows us to share state information
+create 一个 context object 后，每一个 component 都可以 access context object，获取 share 的信息
+
+(图)
+
+1. Create the context
+2. Provide the context to Component
+3. Consume the context value
+
+
+
+npm i axios
+
+axios returns a promise
+

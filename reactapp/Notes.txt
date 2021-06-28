@@ -16,7 +16,7 @@ React is created for rendering DOM faster
 How React is faster than regular DOM updatation?
 React uses virtual DOM. 
 React creates a copy of the DOM, which is known as the virtual DOM.
-React will compare to see which part of the view is change. Only the changed part will be update to avoid reloading the entire page.
+React will compare to see which part of the view is changed. Only the changed part will be update to avoid reloading the entire page.
 
 So React scales better than Angular, faster than Angular
 
@@ -46,11 +46,76 @@ hooks allow you to have state management inside functional component
 
 
 setState is Asynchronous
-Alos have an option to write a callback function
+Also have an option to write a callback function
 
 React 的 pulg-in:
-rce - create a class component
+rce - create new class component
+rfce - create new function component
 rounst - create constructor
 
 接下来学：
 Redux, Flux
+
+
+---
+第一部分：
+References
+
+
+
+Pure component vs Regular component (就是指 Component，普通的 Component)
+
+当state changes 时，When state changes -> component will re-render；
+假设有一个 state 叫 name，从 "John" 变到了 还是 "John":
+Regular component 依然会 re render，
+但 Pure component 就不会 re render了
+
+这是因为：
+shouldComponentUpdate
+Regular component will always return true
+Pure component will do a shallow comparison on props and state it receives, -> to determin whether to re-render or not
+
+那么下面具体讲解 什么是 Shallow Comparison
+Shallow Comparison
+对于 Primitive Types (SC)
+a SC b == ture if a & b has same value + of same type
+例子:
+a = 2
+b = 2
+a === b true
+
+对于 Object
+var a = [1, 2, 3]
+var b = [1, 2, 3]
+var c = a;
+
+a === b false, because a and b points to different memory location
+a === c ture
+(For object, === is comparing the address, not the value; for Primitive, there is no address, so it's different)
+
+Object 也是 reference type，so follows the same rule
+a = {x:1}
+b = {x:1}
+a === b false
+
+
+
+第二部分：
+Error Boundary
+
+getDerivedStateFromError
+
+componentDidCatch
+
+想有 Error Boundary，you need to implement one of them
+
+
+
+第三部分：
+两种 hooks：
+lifecycle hooks
+普通 hooks
+
+为什么要有 hooks？
+hooks are used in functional component, because functional components don't have the feature of class component
+e.g. state

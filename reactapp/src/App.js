@@ -6,6 +6,11 @@ import GreetClass from './Components/GreetClass'
 import Message from './Components/Message'
 import Counter from './Components/Counter'
 import EventBind from './Components/EventBind';
+import Refdemo from './Components/Refdemo';
+import Hero from './Components/Hero';
+import ComponentC from './Components/ComponentC';
+import ErrorBoundary from './Components/ErrorBoundary';
+import Hooksstate from './Components/Hooksstate';
 
 function App() {
   return (
@@ -31,6 +36,16 @@ function App() {
         <Counter></Counter>
 
         <EventBind></EventBind>
+
+        <Refdemo></Refdemo>
+
+        <ErrorBoundary>
+          <Hero heroName="Superman"></Hero>
+          <Hero heroName="Joker"></Hero>     {/* Jokers 有 error will stop Superman from executing */}
+        </ErrorBoundary>
+
+        <Hooksstate></Hooksstate>
+        
       </header>
     </div>
   );
