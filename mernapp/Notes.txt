@@ -1,0 +1,29 @@
+怎么 start server？
+cd 到 backend folder，nodemon server.js
+
+怎么run 前端？
+cd 到 mernapp folder，npm start
+
+后端：
+backend 下的 models folder 中存的是 schema，存的是 mapping，use schema to understand the data in the data base (就像 ORM model，就像 hibernate)
+我们的 app  -->  mapping   -->   database
+
+
+安装 bootstrap（如果像 specify 一个version，就 @version）
+npm i bootstrap@4.0.0
+
+
+To use routing, we need to install the routing library, because React by default does not provide us routing.
+npm i react-router-dom
+
+npm i react-datepicker
+
+we need to send http request to the backend, so we need axios
+npm i axios
+
+想 run 整个 app 需要把 前端后端都 run 起来：
+run 前端：cd 到 mernapp folder，npm start
+run 后端：cd 到 backend folder，nodemon server.js
+
+
+

@@ -11,8 +11,9 @@ Context object - so that we can share some information across components
 Context object - we get it from context API. it allows us to share state information
 create 一个 context object 后，每一个 component 都可以 access context object，获取 share 的信息
 
-(图)
+(React-ContextAPI 图)
 
+使用 context 的流程
 1. Create the context
 2. Provide the context to Component
 3. Consume the context value
@@ -23,3 +24,45 @@ npm i axios
 
 axios returns a promise
 
+axios 不过可以用在 React, 还可以 用在 vue, angular, ... 中
+axios 并不是 React 专有的
+只有是我们 通过 npm 安装的东西，就不是 某一个 technology 专有的
+
+
+cd backend
+npm init -y    create package.json file
+
+npm i express cors mongoose dotenv
+npm i nodemon -g
+
+
+
+
+
+
+
+
+
+
+最后一节
+ReactNative
+View tag 就相当于 web 中的 div tag
+
+这里我们是 define css as java object
+也可以把 css 写在 separate file 中，然后再 import it as global style
+
+destructure 解构（take it outside the object）
+
+React 中的 list 需要 key：
+React needs key to keep track of updates and deletes
+
+How to enable tap?
+Need touchable component
+<TouchOpacity onTouch= ....>....</ TouchOpacity>
+
+How to enable scroll?
+Need ScrollView
+
+
+react-navigation-stack is the most common way of doing navigation
+react-navigation-drawer 也是一种 navigation 的方法，但 stack 更常用
